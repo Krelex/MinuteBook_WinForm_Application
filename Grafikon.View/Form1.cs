@@ -16,7 +16,6 @@ namespace Grafikon.View
     {
         string savePath = @"C:\Users\" + Environment.UserName + @"\desktop\";
 
-
         public Satnica()
         {
             InitializeComponent();
@@ -27,6 +26,7 @@ namespace Grafikon.View
             textBoxSavePath.Text = savePath;
             textBoxRVod.Text = "9";
             textBoxRVdo.Text = "17";
+            textBoxPoduzece.Text = "GRAFIKON DIZAJN d.o.o";
         }
 
         public void btn1_Click(object sender, EventArgs e)
@@ -47,7 +47,11 @@ namespace Grafikon.View
                 ob1.endWork = int.Parse(textBoxRVdo.Text);
                 ob1.ime = textBoxIme.Text;
                 ob1.prezime = textBoxPrezime.Text;
+                ob1.nazivPoduzeca = textBoxPoduzece.Text;
                 ob1.puerperal = radioButtonR2.Checked;
+
+                // Populate Copnay name
+                ob1.SetCompanyName(sheet);
 
                 // Populate Name and Surname field in xls.
                 ob1.SetNameSurname(sheet);

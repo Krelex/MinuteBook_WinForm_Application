@@ -12,6 +12,8 @@ namespace Grafikon.Model
 {
     public class Satnica
     {
+        public string nazivPoduzeca { get; set; }
+
         public string ime { get; set; }
 
         public string prezime { get; set; }
@@ -98,6 +100,11 @@ namespace Grafikon.Model
             return this.ime.ToUpper() + "-" + this.mjesec + "-" + this.godina + ".xls";
         }
 
+        // Set company prop value in corisponding sheet given as a parametar
+        public void SetCompanyName(ISheet sheet)
+        {
+            sheet.GetRow(4).Cells[1].SetCellValue(this.nazivPoduzeca);
+        }
 
         // Set name and surname prop value in corisponding sheet given as a parametar
         public void SetNameSurname ( ISheet sheet)
