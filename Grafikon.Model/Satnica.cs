@@ -73,11 +73,10 @@ namespace Grafikon.Model
         }
 
         // Save our edited workbook [Pass variable Type HSSFWorkbook which you create with openTemp method]
-        public static void saveTemp(HSSFWorkbook workbook , string imeFile)
+        public static void saveTemp(HSSFWorkbook workbook , string saveFile , string savePath)
         {
-            string fileName = imeFile +".xls";
-            string savePath = @"C:\Users\" + Environment.UserName + @"\desktop\\";
-            using (FileStream file = new FileStream(savePath + fileName, FileMode.CreateNew, FileAccess.Write))
+            
+            using (FileStream file = new FileStream(savePath + saveFile, FileMode.CreateNew, FileAccess.Write))
             {
                 workbook.Write(file);
                 file.Close();
@@ -96,7 +95,7 @@ namespace Grafikon.Model
         // Create string for FileName from this object ime , mjesec and godina
         public string FileNameCreator ()
         {
-            return this.ime + "-" + this.mjesec + "-" + this.godina + ".xls";
+            return this.ime.ToUpper() + "-" + this.mjesec + "-" + this.godina + ".xls";
         }
 
 

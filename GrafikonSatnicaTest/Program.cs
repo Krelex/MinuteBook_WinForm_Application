@@ -100,8 +100,8 @@ namespace GrafikonSatnicaTest
                 }
                 datum = datum.AddDays(1);
             }
-
-            Satnica.saveTemp(workbook, ob1.FileNameCreator());
+            string savePath = @"C:\Users\" + Environment.UserName + @"\desktop\\";
+            Satnica.saveTemp(workbook, ob1.FileNameCreator(), savePath);
         }
 
 
