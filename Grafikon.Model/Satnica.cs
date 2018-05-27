@@ -1,5 +1,6 @@
 ﻿using Nager.Date;
 using NPOI.HSSF.UserModel;
+using NPOI.SS.UserModel;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -22,6 +23,8 @@ namespace Grafikon.Model
         public int startWork { get; set; }
 
         public int endWork { get; set; }
+
+        public bool puerperal { get; set; }
 
 
         // return last day of month
@@ -85,6 +88,56 @@ namespace Grafikon.Model
             var isPublicHolday = DateSystem.IsPublicHoliday(datum, CountryCode.HR);
             return isPublicHolday;
             
+        }
+
+
+        // Set name and surname prop value in corisponding sheet given as a parametar
+        public void SetNameSurname ( ISheet sheet)
+        {
+            sheet.GetRow(6).Cells[1].SetCellValue(this.ime + " " + this.prezime);
+        }
+
+        // Set FirstDay method value in corisponding sheet given as a parametar
+        public void SetFirstDayOfMonth(ISheet sheet)
+        {
+            sheet.GetRow(8).Cells[1].SetCellValue(this.FirstDay());
+        }
+
+        // Set FirstDay method value in corisponding sheet given as a parametar
+        public void SetLastDayOfMonth(ISheet sheet)
+        {
+            sheet.GetRow(8).Cells[4].SetCellValue(this.LastDay());
+        }
+
+        // Populate Date and Day.string("ddd") Column in corisponding sheet given as a parametar
+        public void SetDateAndDay(ISheet sheet, int row, DateTime datum)
+        {
+            sheet.GetRow(row).Cells[0].SetCellValue(datum.Date);
+            sheet.GetRow(row).Cells[1].SetCellValue(datum.Date.ToString("ddd"));
+        }
+
+        // Populate StartWork Column in corisponding sheet given as a parametar
+        public void SetStartWork(ISheet sheet, int row)
+        {
+            sheet.GetRow(row).Cells[2].SetCellValue(this.startWork);
+        }
+
+        // Populate EndWork Column in corisponding sheet given as a parametar
+        public void SetEndWork(ISheet sheet, int row)
+        {
+            sheet.GetRow(row).Cells[3].SetCellValue(this.endWork);
+        }
+
+        // Populate TotalWork Column in corisponding sheet given as a parametar
+        public void SetTotalWork(ISheet sheet, int row)
+        {
+            sheet.GetRow(row).Cells[5].SetCellValue(this.TotalWork());
+        }
+
+        // Populate TotalPuerperal Column in corisponding sheet given as a parametar
+        public void SetTotalPuerperal(ISheet sheet, int row)
+        {
+            sheet.GetRow(row).Cells[15].SetCellValue(this.TotalWork());
         }
     }
 }
