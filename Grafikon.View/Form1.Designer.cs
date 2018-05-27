@@ -48,6 +48,8 @@
             this.textBoxSavePath = new System.Windows.Forms.TextBox();
             this.labelFileName = new System.Windows.Forms.Label();
             this.textBoxFileName = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn1
@@ -72,18 +74,18 @@
             this.labelIme.AutoSize = true;
             this.labelIme.Location = new System.Drawing.Point(52, 136);
             this.labelIme.Name = "labelIme";
-            this.labelIme.Size = new System.Drawing.Size(44, 20);
+            this.labelIme.Size = new System.Drawing.Size(50, 20);
             this.labelIme.TabIndex = 2;
-            this.labelIme.Text = "Ime :";
+            this.labelIme.Text = "Ime* :";
             // 
             // labelPrezime
             // 
             this.labelPrezime.AutoSize = true;
             this.labelPrezime.Location = new System.Drawing.Point(52, 188);
             this.labelPrezime.Name = "labelPrezime";
-            this.labelPrezime.Size = new System.Drawing.Size(74, 20);
+            this.labelPrezime.Size = new System.Drawing.Size(80, 20);
             this.labelPrezime.TabIndex = 4;
-            this.labelPrezime.Text = "Prezime :";
+            this.labelPrezime.Text = "Prezime* :";
             // 
             // textBoxPrezime
             // 
@@ -97,9 +99,9 @@
             this.labelGodina.AutoSize = true;
             this.labelGodina.Location = new System.Drawing.Point(50, 237);
             this.labelGodina.Name = "labelGodina";
-            this.labelGodina.Size = new System.Drawing.Size(69, 20);
+            this.labelGodina.Size = new System.Drawing.Size(75, 20);
             this.labelGodina.TabIndex = 6;
-            this.labelGodina.Text = "Godina :";
+            this.labelGodina.Text = "Godina* :";
             // 
             // textBoxGodina
             // 
@@ -113,9 +115,9 @@
             this.labelMjesec.AutoSize = true;
             this.labelMjesec.Location = new System.Drawing.Point(52, 287);
             this.labelMjesec.Name = "labelMjesec";
-            this.labelMjesec.Size = new System.Drawing.Size(67, 20);
+            this.labelMjesec.Size = new System.Drawing.Size(73, 20);
             this.labelMjesec.TabIndex = 8;
-            this.labelMjesec.Text = "Mjesec :";
+            this.labelMjesec.Text = "Mjesec* :";
             // 
             // textBoxMjesec
             // 
@@ -129,9 +131,9 @@
             this.labelRadnoV.AutoSize = true;
             this.labelRadnoV.Location = new System.Drawing.Point(52, 337);
             this.labelRadnoV.Name = "labelRadnoV";
-            this.labelRadnoV.Size = new System.Drawing.Size(150, 20);
+            this.labelRadnoV.Size = new System.Drawing.Size(156, 20);
             this.labelRadnoV.TabIndex = 9;
-            this.labelRadnoV.Text = "Radno vrijeme : OD ";
+            this.labelRadnoV.Text = "Radno vrijeme* : OD ";
             // 
             // textBoxRVod
             // 
@@ -208,9 +210,9 @@
             this.labelFileName.AutoSize = true;
             this.labelFileName.Location = new System.Drawing.Point(451, 237);
             this.labelFileName.Name = "labelFileName";
-            this.labelFileName.Size = new System.Drawing.Size(86, 20);
+            this.labelFileName.Size = new System.Drawing.Size(98, 20);
             this.labelFileName.TabIndex = 18;
-            this.labelFileName.Text = "File name :";
+            this.labelFileName.Text = "File name** :";
             // 
             // textBoxFileName
             // 
@@ -219,11 +221,31 @@
             this.textBoxFileName.Size = new System.Drawing.Size(252, 26);
             this.textBoxFileName.TabIndex = 19;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(451, 390);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(124, 20);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "*Obavezna polja";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(599, 390);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(250, 20);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "**Program ce sam izgenerirati ime!";
+            // 
             // Satnica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(903, 566);
+            this.ClientSize = new System.Drawing.Size(899, 566);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxFileName);
             this.Controls.Add(this.labelFileName);
             this.Controls.Add(this.textBoxSavePath);
@@ -274,6 +296,8 @@
         private System.Windows.Forms.TextBox textBoxSavePath;
         private System.Windows.Forms.Label labelFileName;
         private System.Windows.Forms.TextBox textBoxFileName;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 

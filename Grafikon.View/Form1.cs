@@ -25,6 +25,8 @@ namespace Grafikon.View
         private void Satnica_Load(object sender, EventArgs e)
         {
             textBoxSavePath.Text = savePath;
+            textBoxRVod.Text = "9";
+            textBoxRVdo.Text = "17";
         }
 
         public void btn1_Click(object sender, EventArgs e)
