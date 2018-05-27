@@ -1,0 +1,12 @@
+C:\Users\andre\GrafikonSolution\GrafikonSatnicaTest\Grafikon.Model\bin\Debug\Grafikon.Model.dll
+C:\Users\andre\GrafikonSolution\GrafikonSatnicaTest\Grafikon.Model\bin\Debug\Grafikon.Model.pdb
+C:\Users\andre\GrafikonSolution\GrafikonSatnicaTest\Grafikon.Model\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\andre\GrafikonSolution\GrafikonSatnicaTest\Grafikon.Model\bin\Debug\NPOI.dll
+C:\Users\andre\GrafikonSolution\GrafikonSatnicaTest\Grafikon.Model\bin\Debug\NPOI.OOXML.dll
+C:\Users\andre\GrafikonSolution\GrafikonSatnicaTest\Grafikon.Model\bin\Debug\NPOI.OpenXml4Net.dll
+C:\Users\andre\GrafikonSolution\GrafikonSatnicaTest\Grafikon.Model\bin\Debug\NPOI.OpenXmlFormats.dll
+C:\Users\andre\GrafikonSolution\GrafikonSatnicaTest\Grafikon.Model\bin\Debug\NPOI.xml
+C:\Users\andre\GrafikonSolution\GrafikonSatnicaTest\Grafikon.Model\obj\Debug\Grafikon.Model.csprojResolveAssemblyReference.cache
+C:\Users\andre\GrafikonSolution\GrafikonSatnicaTest\Grafikon.Model\obj\Debug\Grafikon.Model.dll
+C:\Users\andre\GrafikonSolution\GrafikonSatnicaTest\Grafikon.Model\obj\Debug\Grafikon.Model.pdb
+C:\Users\andre\GrafikonSolution\GrafikonSatnicaTest\Grafikon.Model\bin\Debug\Nager.Date.dll

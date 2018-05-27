@@ -1,0 +1,16 @@
+C:\Users\andre\AppData\Local\Temporary Projects\GrafikonSatnicaTest\bin\Debug\GrafikonSatnicaTest.exe.config
+C:\Users\andre\GrafikonSolution\GrafikonSatnicaTest\GrafikonSatnicaTest\bin\Debug\GrafikonSatnicaTest.exe.config
+C:\Users\andre\GrafikonSolution\GrafikonSatnicaTest\GrafikonSatnicaTest\bin\Debug\GrafikonSatnicaTest.exe
+C:\Users\andre\GrafikonSolution\GrafikonSatnicaTest\GrafikonSatnicaTest\bin\Debug\GrafikonSatnicaTest.pdb
+C:\Users\andre\GrafikonSolution\GrafikonSatnicaTest\GrafikonSatnicaTest\obj\Debug\GrafikonSatnicaTest.csprojResolveAssemblyReference.cache
+C:\Users\andre\GrafikonSolution\GrafikonSatnicaTest\GrafikonSatnicaTest\obj\Debug\GrafikonSatnicaTest.exe
+C:\Users\andre\GrafikonSolution\GrafikonSatnicaTest\GrafikonSatnicaTest\obj\Debug\GrafikonSatnicaTest.pdb
+C:\Users\andre\GrafikonSolution\GrafikonSatnicaTest\GrafikonSatnicaTest\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\andre\GrafikonSolution\GrafikonSatnicaTest\GrafikonSatnicaTest\bin\Debug\NPOI.dll
+C:\Users\andre\GrafikonSolution\GrafikonSatnicaTest\GrafikonSatnicaTest\bin\Debug\NPOI.OOXML.dll
+C:\Users\andre\GrafikonSolution\GrafikonSatnicaTest\GrafikonSatnicaTest\bin\Debug\NPOI.OpenXml4Net.dll
+C:\Users\andre\GrafikonSolution\GrafikonSatnicaTest\GrafikonSatnicaTest\bin\Debug\NPOI.OpenXmlFormats.dll
+C:\Users\andre\GrafikonSolution\GrafikonSatnicaTest\GrafikonSatnicaTest\bin\Debug\NPOI.xml
+C:\Users\andre\GrafikonSolution\GrafikonSatnicaTest\GrafikonSatnicaTest\bin\Debug\Grafikon.Model.dll
+C:\Users\andre\GrafikonSolution\GrafikonSatnicaTest\GrafikonSatnicaTest\bin\Debug\Grafikon.Model.pdb
+C:\Users\andre\GrafikonSolution\GrafikonSatnicaTest\GrafikonSatnicaTest\bin\Debug\Nager.Date.dll
