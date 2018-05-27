@@ -38,16 +38,16 @@
             this.labelMjesec = new System.Windows.Forms.Label();
             this.textBoxMjesec = new System.Windows.Forms.TextBox();
             this.labelRadnoV = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxRVod = new System.Windows.Forms.TextBox();
+            this.textBoxRVdo = new System.Windows.Forms.TextBox();
             this.labelRadnoV2 = new System.Windows.Forms.Label();
             this.labelPorodiljni = new System.Windows.Forms.Label();
             this.radioButtonR = new System.Windows.Forms.RadioButton();
             this.radioButtonR2 = new System.Windows.Forms.RadioButton();
             this.labelPath = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxSavePath = new System.Windows.Forms.TextBox();
             this.labelFileName = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxFileName = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btn1
@@ -58,6 +58,7 @@
             this.btn1.TabIndex = 9;
             this.btn1.Text = "DONE";
             this.btn1.UseVisualStyleBackColor = true;
+            this.btn1.Click += new System.EventHandler(this.btn1_Click);
             // 
             // textBoxIme
             // 
@@ -132,19 +133,19 @@
             this.labelRadnoV.TabIndex = 9;
             this.labelRadnoV.Text = "Radno vrijeme : OD ";
             // 
-            // textBox1
+            // textBoxRVod
             // 
-            this.textBox1.Location = new System.Drawing.Point(208, 331);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(67, 26);
-            this.textBox1.TabIndex = 5;
+            this.textBoxRVod.Location = new System.Drawing.Point(208, 331);
+            this.textBoxRVod.Name = "textBoxRVod";
+            this.textBoxRVod.Size = new System.Drawing.Size(67, 26);
+            this.textBoxRVod.TabIndex = 5;
             // 
-            // textBox2
+            // textBoxRVdo
             // 
-            this.textBox2.Location = new System.Drawing.Point(324, 331);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(67, 26);
-            this.textBox2.TabIndex = 6;
+            this.textBoxRVdo.Location = new System.Drawing.Point(324, 331);
+            this.textBoxRVdo.Name = "textBoxRVdo";
+            this.textBoxRVdo.Size = new System.Drawing.Size(67, 26);
+            this.textBoxRVdo.TabIndex = 6;
             // 
             // labelRadnoV2
             // 
@@ -195,12 +196,12 @@
             this.labelPath.TabIndex = 16;
             this.labelPath.Text = "Save Path :";
             // 
-            // textBox3
+            // textBoxSavePath
             // 
-            this.textBox3.Location = new System.Drawing.Point(455, 182);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(370, 26);
-            this.textBox3.TabIndex = 17;
+            this.textBoxSavePath.Location = new System.Drawing.Point(455, 182);
+            this.textBoxSavePath.Name = "textBoxSavePath";
+            this.textBoxSavePath.Size = new System.Drawing.Size(370, 26);
+            this.textBoxSavePath.TabIndex = 17;
             // 
             // labelFileName
             // 
@@ -211,28 +212,28 @@
             this.labelFileName.TabIndex = 18;
             this.labelFileName.Text = "File name :";
             // 
-            // textBox4
+            // textBoxFileName
             // 
-            this.textBox4.Location = new System.Drawing.Point(573, 234);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(252, 26);
-            this.textBox4.TabIndex = 19;
+            this.textBoxFileName.Location = new System.Drawing.Point(573, 234);
+            this.textBoxFileName.Name = "textBoxFileName";
+            this.textBoxFileName.Size = new System.Drawing.Size(252, 26);
+            this.textBoxFileName.TabIndex = 19;
             // 
             // Satnica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(903, 566);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBoxFileName);
             this.Controls.Add(this.labelFileName);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBoxSavePath);
             this.Controls.Add(this.labelPath);
             this.Controls.Add(this.radioButtonR2);
             this.Controls.Add(this.radioButtonR);
             this.Controls.Add(this.labelPorodiljni);
             this.Controls.Add(this.labelRadnoV2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxRVdo);
+            this.Controls.Add(this.textBoxRVod);
             this.Controls.Add(this.labelRadnoV);
             this.Controls.Add(this.labelMjesec);
             this.Controls.Add(this.textBoxMjesec);
@@ -245,6 +246,7 @@
             this.Controls.Add(this.btn1);
             this.Name = "Satnica";
             this.Text = "Satnica input";
+            this.Load += new System.EventHandler(this.Satnica_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -262,16 +264,16 @@
         private System.Windows.Forms.Label labelMjesec;
         private System.Windows.Forms.TextBox textBoxMjesec;
         private System.Windows.Forms.Label labelRadnoV;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxRVod;
+        private System.Windows.Forms.TextBox textBoxRVdo;
         private System.Windows.Forms.Label labelRadnoV2;
         private System.Windows.Forms.Label labelPorodiljni;
         private System.Windows.Forms.RadioButton radioButtonR;
         private System.Windows.Forms.RadioButton radioButtonR2;
         private System.Windows.Forms.Label labelPath;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxSavePath;
         private System.Windows.Forms.Label labelFileName;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxFileName;
     }
 }
 
