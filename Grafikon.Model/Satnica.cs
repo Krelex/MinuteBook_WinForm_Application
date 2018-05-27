@@ -62,6 +62,7 @@ namespace Grafikon.Model
         // Open templet and give it to our workbook [initialize this method to variable Type HSSFWorkbook]
         public static HSSFWorkbook openTemp()
         {
+            
             HSSFWorkbook workbook;
             using (FileStream file = new FileStream(Environment.CurrentDirectory + "\\templetGrafikon.xls", FileMode.Open, FileAccess.Read))
             {
@@ -72,9 +73,11 @@ namespace Grafikon.Model
         }
 
         // Save our edited workbook [Pass variable Type HSSFWorkbook which you create with openTemp method]
-        public static void saveTemp(HSSFWorkbook workbook)
+        public static void saveTemp(HSSFWorkbook workbook , string imeFile)
         {
-            using (FileStream file = new FileStream(Environment.CurrentDirectory + "\\templetGrafikon2.xls", FileMode.CreateNew, FileAccess.Write))
+            string fileName = imeFile +".xls";
+            string savePath = @"C:\Users\" + Environment.UserName + @"\desktop\\";
+            using (FileStream file = new FileStream(savePath + fileName, FileMode.CreateNew, FileAccess.Write))
             {
                 workbook.Write(file);
                 file.Close();
@@ -87,7 +90,13 @@ namespace Grafikon.Model
         {
             var isPublicHolday = DateSystem.IsPublicHoliday(datum, CountryCode.HR);
             return isPublicHolday;
-            
+        }
+
+
+        // Create string for FileName from this object ime , mjesec and godina
+        public string FileNameCreator ()
+        {
+            return this.ime + "-" + this.mjesec + "-" + this.godina + ".xls";
         }
 
 

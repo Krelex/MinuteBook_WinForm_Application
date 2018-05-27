@@ -14,8 +14,10 @@ namespace GrafikonSatnicaTest
     {
         static void Main(string[] args)
         {
-
-            Console.WriteLine(Environment.UserName);
+            string name = "fico";
+            string pathh = @"C:\Users\" + Environment.UserName + @"\desktop\transaction\\"+name+".xsl";
+          
+            Console.WriteLine(pathh);
             //Create working object
             Satnica ob1 = new Satnica();
 
@@ -99,7 +101,7 @@ namespace GrafikonSatnicaTest
                 datum = datum.AddDays(1);
             }
 
-            Satnica.saveTemp(workbook);
+            Satnica.saveTemp(workbook, ob1.FileNameCreator());
         }
 
 
