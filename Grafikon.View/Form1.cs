@@ -40,6 +40,11 @@ namespace Grafikon.View
                 // Create satnica object
                 Grafikon.Model.Satnica ob1 = new Grafikon.Model.Satnica();
 
+                // Check is ime and prezime field is empty and thorw exception if it is
+                if( string.IsNullOrWhiteSpace(textBoxIme.Text) || string.IsNullOrWhiteSpace(textBoxPrezime.Text))
+                {
+                    throw new ArgumentException("pleas fill \"Ime\" and \"Prezime\" fields") ; 
+                }
                 // Set all data from textbox to Satnica object if is valid data
                 ob1.godina = int.Parse(textBoxGodina.Text);
                 ob1.mjesec = int.Parse(textBoxMjesec.Text);
@@ -49,6 +54,8 @@ namespace Grafikon.View
                 ob1.prezime = textBoxPrezime.Text.ToUpper();
                 ob1.nazivPoduzeca = textBoxPoduzece.Text.ToUpper();
                 ob1.puerperal = radioButtonPorodiljni.Checked;
+                ob1.FieldWork = radioButton1đTeren.Checked;
+                ob1.vacation = radioButtonGodisnji.Checked;
 
                 // Populate Copnay name
                 ob1.SetCompanyName(sheet);
@@ -68,7 +75,6 @@ namespace Grafikon.View
                 DateTime datum = ob1.FirstDay();
 
                 // logic for populating data
-
                 for (int i = startingRow; i < endingRow; i++)
                 {
                     // Populate Date and day Column in xls.
@@ -88,14 +94,22 @@ namespace Grafikon.View
                             // Populate Puerperal Column in xls.
                             ob1.SetTotalPuerperal(sheet, i);
                         }
+                        else if (ob1.FieldWork)
+                        {
+                            // Populate Field Column in xls.
+                            ob1.SetFieldWork(sheet, i);
+                        }
+                        else if (ob1.vacation)
+                        {
+                            // Populate Vacation in xls.
+                            ob1.SetTotalVacation(sheet, i);
+                        }
                         else
                         {
                             // Populate TotalWork in xls.
                             ob1.SetTotalWork(sheet, i);
                         }
-
                     }
-
                     datum = datum.AddDays(1);
                 }
 

@@ -28,6 +28,9 @@ namespace Grafikon.Model
 
         public bool puerperal { get; set; }
 
+        public bool FieldWork { get; set; }
+
+        public bool vacation { get; set; }
 
         // return last day of month
         public DateTime LastDay()
@@ -153,6 +156,18 @@ namespace Grafikon.Model
         public void SetTotalPuerperal(ISheet sheet, int row)
         {
             sheet.GetRow(row).Cells[15].SetCellValue(this.TotalWork());
+        }
+
+        // Populate TotalFieldWork Column in corisponding sheet given as a parametar
+        public void SetFieldWork(ISheet sheet, int row)
+        {
+            sheet.GetRow(row).Cells[11].SetCellValue(this.TotalWork());
+        }
+
+        // Populate TotalVocation Column in corisponding sheet given as a parametar
+        public void SetTotalVacation(ISheet sheet, int row)
+        {
+            sheet.GetRow(row).Cells[13].SetCellValue(this.TotalWork());
         }
     }
 }
