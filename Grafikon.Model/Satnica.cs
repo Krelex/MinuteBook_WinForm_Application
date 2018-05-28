@@ -103,13 +103,13 @@ namespace Grafikon.Model
         // Set company prop value in corisponding sheet given as a parametar
         public void SetCompanyName(ISheet sheet)
         {
-            sheet.GetRow(4).Cells[1].SetCellValue(this.nazivPoduzeca);
+            sheet.GetRow(4).Cells[1].SetCellValue(this.nazivPoduzeca.ToUpper());
         }
 
         // Set name and surname prop value in corisponding sheet given as a parametar
         public void SetNameSurname ( ISheet sheet)
         {
-            sheet.GetRow(6).Cells[1].SetCellValue(this.ime + " " + this.prezime);
+            sheet.GetRow(6).Cells[1].SetCellValue(this.ime.ToUpper() + " " + this.prezime.ToUpper());
         }
 
         // Set FirstDay method value in corisponding sheet given as a parametar

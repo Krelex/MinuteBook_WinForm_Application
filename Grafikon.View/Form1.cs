@@ -104,7 +104,7 @@ namespace Grafikon.View
 
                 if (textBoxFileName.Text != string.Empty)
                 {
-                    FileName = textBoxFileName.Text;
+                    FileName = textBoxFileName.Text +".xls";
                 }
                 else
                 {
