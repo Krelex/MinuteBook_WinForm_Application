@@ -43,7 +43,7 @@ namespace Grafikon.View
                 // Check is ime and prezime field is empty and thorw exception if it is
                 if( string.IsNullOrWhiteSpace(textBoxIme.Text) || string.IsNullOrWhiteSpace(textBoxPrezime.Text))
                 {
-                    throw new ArgumentException("pleas fill \"Ime\" and \"Prezime\" fields") ; 
+                    throw new ArgumentException("please fill \"Ime\" and \"Prezime\" fields!") ; 
                 }
                 // Set all data from textbox to Satnica object if is valid data
                 ob1.godina = int.Parse(textBoxGodina.Text);
@@ -128,6 +128,11 @@ namespace Grafikon.View
                 // Save file to chosen path location and file name
                 Grafikon.Model.Satnica.saveTemp(workbook, FileName, savePath);
 
+                // Open file if checkbox is selected
+                if (checkBoxXlsOpen.Checked == true)
+                {
+                    ob1.openFile(savePath + FileName);
+                }
 
                 // Output msg box
                 MessageBox.Show(" \"" + FileName + "\" je uspijesno kreiran! \n Nalazi se na putanji :\"" + savePath + "\"");

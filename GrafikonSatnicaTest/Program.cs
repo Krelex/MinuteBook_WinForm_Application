@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Grafikon.Model;
+using Microsoft.Office.Interop;
+using Microsoft.Office.Interop.Excel;
 
 namespace GrafikonSatnicaTest
 {
@@ -101,7 +103,14 @@ namespace GrafikonSatnicaTest
                 datum = datum.AddDays(1);
             }
             string savePath = @"C:\Users\" + Environment.UserName + @"\desktop\\";
+
             Satnica.saveTemp(workbook, ob1.FileNameCreator(), savePath);
+
+            var excel = new Microsoft.Office.Interop.Excel.Application();
+            excel.Visible = true;
+
+            Microsoft.Office.Interop.Excel.Workbooks books = excel.Workbooks;
+            Microsoft.Office.Interop.Excel.Workbook sheet2 = books.Open(savePath + ob1.FileNameCreator());
         }
 
 

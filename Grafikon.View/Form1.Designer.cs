@@ -54,6 +54,7 @@
             this.textBoxPoduzece = new System.Windows.Forms.TextBox();
             this.radioButton1đTeren = new System.Windows.Forms.RadioButton();
             this.radioButtonGodisnji = new System.Windows.Forms.RadioButton();
+            this.checkBoxXlsOpen = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // btn1
@@ -79,7 +80,7 @@
             // labelIme
             // 
             this.labelIme.AutoSize = true;
-            this.labelIme.Location = new System.Drawing.Point(26, 30);
+            this.labelIme.Location = new System.Drawing.Point(24, 30);
             this.labelIme.Name = "labelIme";
             this.labelIme.Size = new System.Drawing.Size(50, 20);
             this.labelIme.TabIndex = 2;
@@ -88,7 +89,7 @@
             // labelPrezime
             // 
             this.labelPrezime.AutoSize = true;
-            this.labelPrezime.Location = new System.Drawing.Point(26, 82);
+            this.labelPrezime.Location = new System.Drawing.Point(24, 82);
             this.labelPrezime.Name = "labelPrezime";
             this.labelPrezime.Size = new System.Drawing.Size(80, 20);
             this.labelPrezime.TabIndex = 4;
@@ -168,7 +169,7 @@
             // labelTip
             // 
             this.labelTip.AutoSize = true;
-            this.labelTip.Location = new System.Drawing.Point(26, 284);
+            this.labelTip.Location = new System.Drawing.Point(24, 282);
             this.labelTip.Name = "labelTip";
             this.labelTip.Size = new System.Drawing.Size(74, 20);
             this.labelTip.TabIndex = 13;
@@ -178,7 +179,7 @@
             // 
             this.radioButtonR.AutoSize = true;
             this.radioButtonR.Checked = true;
-            this.radioButtonR.Location = new System.Drawing.Point(126, 284);
+            this.radioButtonR.Location = new System.Drawing.Point(123, 280);
             this.radioButtonR.Name = "radioButtonR";
             this.radioButtonR.Size = new System.Drawing.Size(86, 24);
             this.radioButtonR.TabIndex = 7;
@@ -189,7 +190,7 @@
             // radioButtonPorodiljni
             // 
             this.radioButtonPorodiljni.AutoSize = true;
-            this.radioButtonPorodiljni.Location = new System.Drawing.Point(218, 284);
+            this.radioButtonPorodiljni.Location = new System.Drawing.Point(259, 280);
             this.radioButtonPorodiljni.Name = "radioButtonPorodiljni";
             this.radioButtonPorodiljni.Size = new System.Drawing.Size(97, 24);
             this.radioButtonPorodiljni.TabIndex = 8;
@@ -207,15 +208,15 @@
             // 
             // textBoxSavePath
             // 
-            this.textBoxSavePath.Location = new System.Drawing.Point(429, 76);
+            this.textBoxSavePath.Location = new System.Drawing.Point(547, 30);
             this.textBoxSavePath.Name = "textBoxSavePath";
-            this.textBoxSavePath.Size = new System.Drawing.Size(370, 26);
+            this.textBoxSavePath.Size = new System.Drawing.Size(242, 26);
             this.textBoxSavePath.TabIndex = 17;
             // 
             // labelFileName
             // 
             this.labelFileName.AutoSize = true;
-            this.labelFileName.Location = new System.Drawing.Point(425, 131);
+            this.labelFileName.Location = new System.Drawing.Point(425, 82);
             this.labelFileName.Name = "labelFileName";
             this.labelFileName.Size = new System.Drawing.Size(98, 20);
             this.labelFileName.TabIndex = 18;
@@ -223,15 +224,15 @@
             // 
             // textBoxFileName
             // 
-            this.textBoxFileName.Location = new System.Drawing.Point(547, 128);
+            this.textBoxFileName.Location = new System.Drawing.Point(547, 82);
             this.textBoxFileName.Name = "textBoxFileName";
-            this.textBoxFileName.Size = new System.Drawing.Size(252, 26);
+            this.textBoxFileName.Size = new System.Drawing.Size(242, 26);
             this.textBoxFileName.TabIndex = 19;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(425, 284);
+            this.label1.Location = new System.Drawing.Point(425, 302);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(124, 20);
             this.label1.TabIndex = 20;
@@ -240,7 +241,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(425, 316);
+            this.label2.Location = new System.Drawing.Point(425, 322);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(250, 20);
             this.label2.TabIndex = 21;
@@ -249,7 +250,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(425, 181);
+            this.label3.Location = new System.Drawing.Point(425, 131);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(130, 20);
             this.label3.TabIndex = 22;
@@ -257,15 +258,15 @@
             // 
             // textBoxPoduzece
             // 
-            this.textBoxPoduzece.Location = new System.Drawing.Point(429, 228);
+            this.textBoxPoduzece.Location = new System.Drawing.Point(429, 181);
             this.textBoxPoduzece.Name = "textBoxPoduzece";
-            this.textBoxPoduzece.Size = new System.Drawing.Size(370, 26);
+            this.textBoxPoduzece.Size = new System.Drawing.Size(360, 26);
             this.textBoxPoduzece.TabIndex = 23;
             // 
             // radioButton1đTeren
             // 
             this.radioButton1đTeren.AutoSize = true;
-            this.radioButton1đTeren.Location = new System.Drawing.Point(126, 314);
+            this.radioButton1đTeren.Location = new System.Drawing.Point(259, 322);
             this.radioButton1đTeren.Name = "radioButton1đTeren";
             this.radioButton1đTeren.Size = new System.Drawing.Size(94, 24);
             this.radioButton1đTeren.TabIndex = 25;
@@ -276,7 +277,7 @@
             // radioButtonGodisnji
             // 
             this.radioButtonGodisnji.AutoSize = true;
-            this.radioButtonGodisnji.Location = new System.Drawing.Point(218, 314);
+            this.radioButtonGodisnji.Location = new System.Drawing.Point(123, 322);
             this.radioButtonGodisnji.Name = "radioButtonGodisnji";
             this.radioButtonGodisnji.Size = new System.Drawing.Size(91, 24);
             this.radioButtonGodisnji.TabIndex = 26;
@@ -284,11 +285,22 @@
             this.radioButtonGodisnji.Text = "Godišnji";
             this.radioButtonGodisnji.UseVisualStyleBackColor = true;
             // 
+            // checkBoxXlsOpen
+            // 
+            this.checkBoxXlsOpen.AutoSize = true;
+            this.checkBoxXlsOpen.Location = new System.Drawing.Point(429, 231);
+            this.checkBoxXlsOpen.Name = "checkBoxXlsOpen";
+            this.checkBoxXlsOpen.Size = new System.Drawing.Size(124, 24);
+            this.checkBoxXlsOpen.TabIndex = 27;
+            this.checkBoxXlsOpen.Text = "Open xls. file";
+            this.checkBoxXlsOpen.UseVisualStyleBackColor = true;
+            // 
             // Satnica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(826, 443);
+            this.Controls.Add(this.checkBoxXlsOpen);
             this.Controls.Add(this.radioButtonGodisnji);
             this.Controls.Add(this.radioButton1đTeren);
             this.Controls.Add(this.textBoxPoduzece);
@@ -316,7 +328,7 @@
             this.Controls.Add(this.textBoxIme);
             this.Controls.Add(this.btn1);
             this.Name = "Satnica";
-            this.Text = "Satnica input";
+            this.Text = "Satnica";
             this.Load += new System.EventHandler(this.Satnica_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -351,6 +363,7 @@
         private System.Windows.Forms.TextBox textBoxPoduzece;
         private System.Windows.Forms.RadioButton radioButton1đTeren;
         private System.Windows.Forms.RadioButton radioButtonGodisnji;
+        private System.Windows.Forms.CheckBox checkBoxXlsOpen;
     }
 }
 

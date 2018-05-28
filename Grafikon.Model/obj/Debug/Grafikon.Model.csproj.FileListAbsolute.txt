@@ -10,3 +10,4 @@ C:\Users\andre\GrafikonSolution\GrafikonSatnicaTest\Grafikon.Model\obj\Debug\Gra
 C:\Users\andre\GrafikonSolution\GrafikonSatnicaTest\Grafikon.Model\obj\Debug\Grafikon.Model.dll
 C:\Users\andre\GrafikonSolution\GrafikonSatnicaTest\Grafikon.Model\obj\Debug\Grafikon.Model.pdb
 C:\Users\andre\GrafikonSolution\GrafikonSatnicaTest\Grafikon.Model\bin\Debug\Nager.Date.dll
+C:\Users\andre\GrafikonSolution\GrafikonSatnicaTest\Grafikon.Model\obj\Debug\Grafikon.Model.csproj.ResolveComReference.cache

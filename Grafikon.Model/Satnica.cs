@@ -169,5 +169,15 @@ namespace Grafikon.Model
         {
             sheet.GetRow(row).Cells[13].SetCellValue(this.TotalWork());
         }
+
+        // Method for open file from save location
+        public void openFile(string path)
+        {
+            var excel = new Microsoft.Office.Interop.Excel.Application();
+            excel.Visible = true;
+
+            Microsoft.Office.Interop.Excel.Workbooks books = excel.Workbooks;
+            Microsoft.Office.Interop.Excel.Workbook sheet2 = books.Open(path);
+        }
     }
 }
