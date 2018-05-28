@@ -45,10 +45,10 @@ namespace Grafikon.View
                 ob1.mjesec = int.Parse(textBoxMjesec.Text);
                 ob1.startWork = int.Parse(textBoxRVod.Text);
                 ob1.endWork = int.Parse(textBoxRVdo.Text);
-                ob1.ime = textBoxIme.Text;
-                ob1.prezime = textBoxPrezime.Text;
-                ob1.nazivPoduzeca = textBoxPoduzece.Text;
-                ob1.puerperal = radioButtonR2.Checked;
+                ob1.ime = textBoxIme.Text.ToUpper();
+                ob1.prezime = textBoxPrezime.Text.ToUpper();
+                ob1.nazivPoduzeca = textBoxPoduzece.Text.ToUpper();
+                ob1.puerperal = radioButtonPorodiljni.Checked;
 
                 // Populate Copnay name
                 ob1.SetCompanyName(sheet);
