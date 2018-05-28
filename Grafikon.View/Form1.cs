@@ -15,6 +15,9 @@ namespace Grafikon.View
     public partial class Satnica : Form
     {
         string savePath = @"C:\Users\" + Environment.UserName + @"\desktop\";
+        string partIme = string.Empty;
+        string partMj = string.Empty;
+        string partGodina = string.Empty;
 
         public Satnica()
         {
@@ -145,6 +148,24 @@ namespace Grafikon.View
             }
             
 
+        }
+
+        private void textBoxIme_Leave(object sender, EventArgs e)
+        {
+            partIme = textBoxIme.Text.ToUpper();
+            textBoxFileName.Text = string.Format("{0}-{1}-{2}",partIme,partMj,partGodina);
+        }
+
+        private void textBoxGodina_Leave(object sender, EventArgs e)
+        {
+            partGodina=textBoxGodina.Text ;
+            textBoxFileName.Text = string.Format("{0}-{1}-{2}", partIme, partMj, partGodina);
+        }
+
+        private void textBoxMjesec_Leave(object sender, EventArgs e)
+        {
+            partMj = textBoxMjesec.Text;
+            textBoxFileName.Text = string.Format("{0}-{1}-{2}", partIme, partMj, partGodina);
         }
     }
 }

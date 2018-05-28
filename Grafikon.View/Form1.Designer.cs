@@ -49,7 +49,6 @@
             this.labelFileName = new System.Windows.Forms.Label();
             this.textBoxFileName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxPoduzece = new System.Windows.Forms.TextBox();
             this.radioButton1đTeren = new System.Windows.Forms.RadioButton();
@@ -62,10 +61,10 @@
             this.btn1.BackColor = System.Drawing.Color.Green;
             this.btn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn1.ForeColor = System.Drawing.Color.White;
-            this.btn1.Location = new System.Drawing.Point(329, 357);
+            this.btn1.Location = new System.Drawing.Point(325, 372);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(149, 64);
-            this.btn1.TabIndex = 9;
+            this.btn1.TabIndex = 15;
             this.btn1.Text = "DONE";
             this.btn1.UseVisualStyleBackColor = false;
             this.btn1.Click += new System.EventHandler(this.btn1_Click);
@@ -76,6 +75,7 @@
             this.textBoxIme.Name = "textBoxIme";
             this.textBoxIme.Size = new System.Drawing.Size(242, 26);
             this.textBoxIme.TabIndex = 1;
+            this.textBoxIme.Leave += new System.EventHandler(this.textBoxIme_Leave);
             // 
             // labelIme
             // 
@@ -117,6 +117,7 @@
             this.textBoxGodina.Name = "textBoxGodina";
             this.textBoxGodina.Size = new System.Drawing.Size(242, 26);
             this.textBoxGodina.TabIndex = 3;
+            this.textBoxGodina.Leave += new System.EventHandler(this.textBoxGodina_Leave);
             // 
             // labelMjesec
             // 
@@ -129,10 +130,11 @@
             // 
             // textBoxMjesec
             // 
-            this.textBoxMjesec.Location = new System.Drawing.Point(123, 175);
+            this.textBoxMjesec.Location = new System.Drawing.Point(123, 178);
             this.textBoxMjesec.Name = "textBoxMjesec";
             this.textBoxMjesec.Size = new System.Drawing.Size(242, 26);
             this.textBoxMjesec.TabIndex = 4;
+            this.textBoxMjesec.Leave += new System.EventHandler(this.textBoxMjesec_Leave);
             // 
             // labelRadnoV
             // 
@@ -169,7 +171,7 @@
             // labelTip
             // 
             this.labelTip.AutoSize = true;
-            this.labelTip.Location = new System.Drawing.Point(24, 282);
+            this.labelTip.Location = new System.Drawing.Point(425, 276);
             this.labelTip.Name = "labelTip";
             this.labelTip.Size = new System.Drawing.Size(74, 20);
             this.labelTip.TabIndex = 13;
@@ -179,10 +181,10 @@
             // 
             this.radioButtonR.AutoSize = true;
             this.radioButtonR.Checked = true;
-            this.radioButtonR.Location = new System.Drawing.Point(123, 280);
+            this.radioButtonR.Location = new System.Drawing.Point(524, 274);
             this.radioButtonR.Name = "radioButtonR";
             this.radioButtonR.Size = new System.Drawing.Size(86, 24);
-            this.radioButtonR.TabIndex = 7;
+            this.radioButtonR.TabIndex = 11;
             this.radioButtonR.TabStop = true;
             this.radioButtonR.Text = "Default";
             this.radioButtonR.UseVisualStyleBackColor = true;
@@ -190,10 +192,10 @@
             // radioButtonPorodiljni
             // 
             this.radioButtonPorodiljni.AutoSize = true;
-            this.radioButtonPorodiljni.Location = new System.Drawing.Point(259, 280);
+            this.radioButtonPorodiljni.Location = new System.Drawing.Point(660, 274);
             this.radioButtonPorodiljni.Name = "radioButtonPorodiljni";
             this.radioButtonPorodiljni.Size = new System.Drawing.Size(97, 24);
-            this.radioButtonPorodiljni.TabIndex = 8;
+            this.radioButtonPorodiljni.TabIndex = 12;
             this.radioButtonPorodiljni.Text = "Porodiljni";
             this.radioButtonPorodiljni.UseVisualStyleBackColor = true;
             // 
@@ -211,41 +213,32 @@
             this.textBoxSavePath.Location = new System.Drawing.Point(547, 30);
             this.textBoxSavePath.Name = "textBoxSavePath";
             this.textBoxSavePath.Size = new System.Drawing.Size(242, 26);
-            this.textBoxSavePath.TabIndex = 17;
+            this.textBoxSavePath.TabIndex = 7;
             // 
             // labelFileName
             // 
             this.labelFileName.AutoSize = true;
             this.labelFileName.Location = new System.Drawing.Point(425, 82);
             this.labelFileName.Name = "labelFileName";
-            this.labelFileName.Size = new System.Drawing.Size(98, 20);
+            this.labelFileName.Size = new System.Drawing.Size(86, 20);
             this.labelFileName.TabIndex = 18;
-            this.labelFileName.Text = "File name** :";
+            this.labelFileName.Text = "File name :";
             // 
             // textBoxFileName
             // 
             this.textBoxFileName.Location = new System.Drawing.Point(547, 82);
             this.textBoxFileName.Name = "textBoxFileName";
             this.textBoxFileName.Size = new System.Drawing.Size(242, 26);
-            this.textBoxFileName.TabIndex = 19;
+            this.textBoxFileName.TabIndex = 8;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(425, 302);
+            this.label1.Location = new System.Drawing.Point(26, 278);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(124, 20);
             this.label1.TabIndex = 20;
             this.label1.Text = "*Obavezna polja";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(425, 322);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(250, 20);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "**Program ce sam izgenerirati ime!";
             // 
             // label3
             // 
@@ -258,18 +251,18 @@
             // 
             // textBoxPoduzece
             // 
-            this.textBoxPoduzece.Location = new System.Drawing.Point(429, 181);
+            this.textBoxPoduzece.Location = new System.Drawing.Point(429, 175);
             this.textBoxPoduzece.Name = "textBoxPoduzece";
             this.textBoxPoduzece.Size = new System.Drawing.Size(360, 26);
-            this.textBoxPoduzece.TabIndex = 23;
+            this.textBoxPoduzece.TabIndex = 9;
             // 
             // radioButton1đTeren
             // 
             this.radioButton1đTeren.AutoSize = true;
-            this.radioButton1đTeren.Location = new System.Drawing.Point(259, 322);
+            this.radioButton1đTeren.Location = new System.Drawing.Point(660, 316);
             this.radioButton1đTeren.Name = "radioButton1đTeren";
             this.radioButton1đTeren.Size = new System.Drawing.Size(94, 24);
-            this.radioButton1đTeren.TabIndex = 25;
+            this.radioButton1đTeren.TabIndex = 14;
             this.radioButton1đTeren.TabStop = true;
             this.radioButton1đTeren.Text = "Terenski";
             this.radioButton1đTeren.UseVisualStyleBackColor = true;
@@ -277,10 +270,10 @@
             // radioButtonGodisnji
             // 
             this.radioButtonGodisnji.AutoSize = true;
-            this.radioButtonGodisnji.Location = new System.Drawing.Point(123, 322);
+            this.radioButtonGodisnji.Location = new System.Drawing.Point(524, 316);
             this.radioButtonGodisnji.Name = "radioButtonGodisnji";
             this.radioButtonGodisnji.Size = new System.Drawing.Size(91, 24);
-            this.radioButtonGodisnji.TabIndex = 26;
+            this.radioButtonGodisnji.TabIndex = 13;
             this.radioButtonGodisnji.TabStop = true;
             this.radioButtonGodisnji.Text = "Godišnji";
             this.radioButtonGodisnji.UseVisualStyleBackColor = true;
@@ -291,7 +284,7 @@
             this.checkBoxXlsOpen.Location = new System.Drawing.Point(429, 231);
             this.checkBoxXlsOpen.Name = "checkBoxXlsOpen";
             this.checkBoxXlsOpen.Size = new System.Drawing.Size(124, 24);
-            this.checkBoxXlsOpen.TabIndex = 27;
+            this.checkBoxXlsOpen.TabIndex = 10;
             this.checkBoxXlsOpen.Text = "Open xls. file";
             this.checkBoxXlsOpen.UseVisualStyleBackColor = true;
             // 
@@ -299,13 +292,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(826, 443);
+            this.ClientSize = new System.Drawing.Size(826, 461);
             this.Controls.Add(this.checkBoxXlsOpen);
             this.Controls.Add(this.radioButtonGodisnji);
             this.Controls.Add(this.radioButton1đTeren);
             this.Controls.Add(this.textBoxPoduzece);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxFileName);
             this.Controls.Add(this.labelFileName);
@@ -358,7 +350,6 @@
         private System.Windows.Forms.Label labelFileName;
         private System.Windows.Forms.TextBox textBoxFileName;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxPoduzece;
         private System.Windows.Forms.RadioButton radioButton1đTeren;
